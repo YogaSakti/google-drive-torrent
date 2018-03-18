@@ -11,9 +11,6 @@ html
 
         // Navbar
         .ui.fixed.yellow.inverted.secondary.menu
-            a.item
-                i.fa.fa-bars
-            a.item.red Dashboard
             .right.menu
                 a.item#menu-profile-icon
                     img.ui.circular.mini.image(src=pic)
@@ -24,7 +21,7 @@ html
                                 .ui.tiny.circular.image
                                     img(src=pic)
                                 .middle.aligned.content
-                                    .header(style="color: grey; font-weight: bold; font-size: 16px")= name || 'Guest'
+                                    .header(style="color: grey; font-weight: bold; font-size: 16px")= name || 'You'
                                     a.ui.google.plus.labeled.icon.mini.button(href="https://myaccount.google.com" style="margin-top: 10px")
                                         i.google.plus.icon
                                         | My account
@@ -48,7 +45,7 @@ html
                     .row
                         .left.floated.column
                             h1.ui.inverted.header(style="font-family: Source Sans Pro; font-size: 3rem; font-weight: 300")
-                                span(style="padding: 5px 10px; background: rgba(0, 0, 0, 0.125)") Hi,
+                                span(style="padding: 5px 10px; background: rgba(0, 0, 0, 0.125)") Dashboard
                     
                     .centered.row
                         .ui.steps
