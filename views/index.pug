@@ -9,14 +9,6 @@ html
                 
     body
 
-        .ui.fixed.inverted.secondary.menu
-            a.item
-                i.fa.fa-bars
-            a.item.red Home
-            .right.menu
-                a.item(href="/login")
-                    .ui.primary.button Log in
-
         .ui.inverted.vertical.segment(style="padding-top: 40px; min-height: 100%; background-image: url('./img/G.jpg'); background-size: cover")
             if error
                 .ui.small.basic.error.modal
@@ -61,9 +53,6 @@ html
                             #speedometer.ui.orange.active.striped.indicating.progress(data-percent="0")
                                 .bar(style="width: 100%")
                                     .progress       
-                        .ui.tiny.image(style="margin-left: 20px")
-                                img(src="https://cdn1.iconfinder.com/data/icons/miscellaneous-4/32/dashboard-high-512.png")
-                            
                     .centered.row
                         a(href="/login")
                             button.ui.pink.right.labeled.icon.button
