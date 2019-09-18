@@ -24,9 +24,7 @@ const fileUpload = require('express-fileupload');
 const path = require('path');
 const util = require('util');
 const locks = require('locks');
-const async = require('async');
 const _ = require('lodash');
-const zip = require('express-zip');
 const driveIO = require('google-drive-io');
 const app = express();
 
