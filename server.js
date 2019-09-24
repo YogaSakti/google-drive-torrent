@@ -220,11 +220,11 @@ app.post('/add-torrent', (req, res) => {
             console.error('Torrent on error: ' + err);
         });
 
-        // torrent.on('download', (bytes) => {
-        //     console.log(`${torrent.infoHash} downloaded ${torrent.downloaded / 1024} kB \
-        //                  (${torrent.progress * 100}%) @ ${torrent.downloadSpeed / 1024} kB/s. \
-        //                  ETA: ${torrent.timeRemaining / 1000} sec`);
-        // });
+        torrent.on('download', (bytes) => {
+            console.log(`${torrent.name} downloaded ${torrent.downloaded / 1024} kB \
+                         (${torrent.progress * 100}%) @ ${torrent.downloadSpeed / 1024} kB/s. \
+                         ETA: ${torrent.timeRemaining / 1000} sec`);
+        });
     });    
 });
 
