@@ -221,9 +221,7 @@ app.post('/add-torrent', (req, res) => {
         });
 
         torrent.on('download', (bytes) => {
-            console.log(`${torrent.name} downloaded ${torrent.downloaded / 1024} kB \
-                         (${torrent.progress * 100}%) @ ${torrent.downloadSpeed / 1024} kB/s. \
-                         ETA: ${torrent.timeRemaining / 1000} sec`);
+            // console.log(`${torrent.name} downloaded ${torrent.downloaded / 1024} kB \(${torrent.progress * 100}%) @ ${torrent.downloadSpeed / 1024} kB/s. \ETA: ${torrent.timeRemaining / 1000} sec`);
         });
     });    
 });
