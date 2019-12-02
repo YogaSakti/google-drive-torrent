@@ -92,6 +92,8 @@ app.get('/dashboard', (req, res) => {
         const user = req.session.user;
         const driveUrl = req.session.driveUrl;
         console.log(req)
+        console.log("=============================================================================================================")
+        console.log(res)
         res.render('dashboard.pug', {
             name: user.displayName,
             firstName: user.name.givenName,
