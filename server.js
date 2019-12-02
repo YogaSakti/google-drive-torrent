@@ -91,9 +91,9 @@ app.get('/dashboard', (req, res) => {
     ifLoggedIn(req, res, () => {
         const user = req.session.user;
         const driveUrl = req.session.driveUrl;
-        console.log(user)
-        const displayName = (user.name.has("displayName")) ? user.name.displayName : "name";
-        const givenName = (user.name.has("givenName")) ? user.name.givenName : "name";
+        // console.log(user)
+        const displayName = ("displayName" in user.name) ? user.name.displayName : "name";
+        const givenName = ("givenName" in user.name) ? user.name.givenName : "name";
         res.render('dashboard.pug', {
             name: displayName,
             firstName: givenName,
