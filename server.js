@@ -1,6 +1,5 @@
 "use strict";
 
-
 const DRIVE_CLIENT_ID = process.env.clientId;
 const DRIVE_CLIENT_SECRET = process.env.clientSecret;
 const DRIVE_REDIRECT_URI = process.env.DRIVE_REDIRECT_URI || 'https://google-torrent.herokuapp.com/login-callback';
@@ -213,7 +212,7 @@ app.post('/add-torrent', (req, res) => {
         });     
 
         torrent.on('error', (err) => {
-            torrent.error = err.message;                       // Attach error onto torrent (hack!)
+            torrent.error = err.message;                   
             const info = getTorrentInfo(torrent);
             socket.emit('torrent-error', info);
             socket.emit('torrent-update', info);
